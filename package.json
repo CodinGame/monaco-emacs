@@ -1,9 +1,13 @@
 {
-  "name": "monaco-emacs",
+  "name": "@codingame/monaco-emacs",
   "version": "0.2.2",
   "description": "Emacs keybindings for monaco-editor",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "start": "webpack-dev-server --mode development --host=0.0.0.0 --port=8282",
