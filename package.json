@@ -6,12 +6,10 @@
   "typings": "./lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "start": "webpack-dev-server --mode development --host=0.0.0.0 --port=8080",
-    "clean": "rm -rf lib dist local",
-    "typing": "dts-generator --name monaco-emacs --project ./ --out lib/monaco-emacs.d.ts",
+    "start": "webpack-dev-server --mode development --host=0.0.0.0 --port=8282",
+    "clean": "rm -rf lib dist",
     "dist": "webpack --mode production && rm -rf dist/lib",
     "build": "npm run clean && tsc && npm run dist",
-    "local": "mkdir -p local && cp -r lib dist package.json local",
     "prepublishOnly": "npm run build"
   },
   "keywords": [],
