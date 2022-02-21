@@ -1,13 +1,15 @@
+This is a fork of the repository [https://github.com/brijeshb42/monaco-emacs](https://github.com/brijeshb42/monaco-emacs)
+
 ## monaco-emacs
 
-[![npm version](https://badge.fury.io/js/monaco-emacs.svg)](https://www.npmjs.com/package/monaco-emacs)
+[![npm version](https://badge.fury.io/js/monaco-emacs.svg)](https://www.npmjs.com/package/@codingame/monaco-emacs)
 
 Emacs key bindings for monaco-editor. [Demo](https://editor.bitwiser.in).
 
 ### Installation
 
 ```sh
-npm install monaco-emacs
+npm install @codingame/monaco-emacs
 ```
 
 ### Usage
@@ -16,12 +18,12 @@ npm install monaco-emacs
 
 ```js
 import * as monaco from 'monaco-editor';
-import { EmacsExtension } from 'monaco-emacs';
+import { EmacsExtension } from '@codingame/monaco-emacs';
 ```
 
 #### Browser
 
-* Add this script in your html - `https://unpkg.com/monaco-emacs/dist/monaco-emacs.js`.
+* Add this script in your html - `https://unpkg.com/@codingamemonaco-emacs/dist/monaco-emacs.js`.
 * The extension will be available as `MonacoEmacs` on `window`
 
 ```js
@@ -52,7 +54,7 @@ emacsMode.dispose();
 #### Unregister default keys
 
 ```js
-import { unregisterKey } from 'monaco-emacs';
+import { unregisterKey } from '@codingame/monaco-emacs';
 
 unregisterKey('Tab');
 ```
@@ -60,7 +62,7 @@ unregisterKey('Tab');
 #### Get all available mappings
 
 ```js
-import { getAllMappings } from 'monaco-emacs';
+import { getAllMappings } from '@codingame/monaco-emacs';
 
 console.log(getAllMappings());
 ```
@@ -86,7 +88,7 @@ If you are following the official guide and integrating the AMD version of `mona
   require.config({
     paths: {
       'vs': 'https://unpkg.com/monaco-editor/min/vs',
-      'monaco-emacs': 'https://unpkg.com/monaco-emacs/dist/monaco-emacs',
+      'monaco-emacs': 'https://unpkg.com/@codingame/monaco-emacs/dist/monaco-emacs',
     }
   });
   require(['vs/editor/editor.main', 'monaco-emacs'], function(a, MonacoEmacs) {
@@ -116,4 +118,4 @@ If you are following the official guide and integrating the AMD version of `mona
 </html>
 ```
 
-Please [report](https://github.com/brijeshb42/monaco-emacs/issues/new) any inconsistencies or missing key bindings.
+Please [report](https://github.com/codingame/monaco-emacs/issues/new) any inconsistencies or missing key bindings.

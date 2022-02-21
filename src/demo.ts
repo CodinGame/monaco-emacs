@@ -1,6 +1,6 @@
 import * as monaco from 'monaco-editor';
 
-import { EmacsExtension, unregisterKey, getAllMappings } from './';
+import { EmacsExtension } from './';
 
 const editorNode = document.getElementById('editor');
 const statusNode = document.getElementById('status');
@@ -19,10 +19,7 @@ editor.focus();
 declare global {
   interface Window {
     editor: any;
-    vim: any;
     emacs: any;
-    TextEditor: any;
-    Position: any;
   }
 }
 

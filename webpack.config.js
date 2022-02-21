@@ -1,14 +1,6 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
-const pkg = require('./package.json');
-
-const banner = [
-  `${pkg.name}`,
-  `Version - ${pkg.version}`,
-  `Author - ${pkg.author}`,
-].join('\n');
 
 function getOutput(isProd = false) {
   const data = {
@@ -54,14 +46,14 @@ module.exports = (env, argv) => {
         ],
       }] : []),
     },
-    plugins: isProd ? [
-      new webpack.BannerPlugin(banner),
-    ] : [
-      new HtmlWebpackPlugin({
-        template: path.join(__dirname, './index.html'),
-      }),
-      new MonacoWebpackPlugin(),
-    ],
+    plugins: isProd
+      ? []
+      : [
+        new HtmlWebpackPlugin({
+          template: path.join(__dirname, './index.html'),
+        }),
+        new MonacoWebpackPlugin(),
+      ],
     externals: isProd ? {
       'monaco-editor': {
         root: 'monaco',
